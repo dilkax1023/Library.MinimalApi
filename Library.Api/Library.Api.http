@@ -1,0 +1,30 @@
+###
+@Library = https://localhost:7096
+GET {{Library}}/books
+Accept: application/json
+###
+
+###
+@id = 12345-6789
+GET {{Library}}/books/{{id}}
+Accept: application/json
+###
+
+###
+GET {{Library}}/books?searchTerm=Iz
+Accept: application/json
+###
+
+POST {{Library}}/books
+Content-Type: application/json
+
+{
+    "isbn": "123456789",
+    "title": "Iz",
+    "shortDescription": "description for iz",
+    "releaseDate": "1984-05-04",
+    "author": "Abduryim utkur",
+    "pageCount": 680
+}
+
+###
